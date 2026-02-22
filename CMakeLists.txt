@@ -40,7 +40,6 @@ target_include_directories(lbfgspp INTERFACE
 
 find_package(Eigen3 REQUIRED)
 target_link_libraries(lbfgspp INTERFACE Eigen3::Eigen)
-message("-- Eigen3 version: " ${EIGEN3_VERSION_STRING})
 
 # + ------------ +
 # | INSTALLATION |
@@ -83,5 +82,3 @@ install(
     ${CMAKE_CURRENT_BINARY_DIR}/lbfgspp-config-version.cmake
   DESTINATION lib/cmake/lbfgspp
 )
-
-add_subdirectory(examples)
